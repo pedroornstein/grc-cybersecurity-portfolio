@@ -38,6 +38,10 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 9. Consider management tradeoffs with the [risk-treatment decision memo](09-risk-treatment-decisions/risk-treatment-memo.md).
 10. Practice presenting the work with the [interview walkthrough](10-interview-walkthrough/interview-guide.md).
 
+## Quality Assurance and Limitations
+
+See the **[portfolio quality-assurance review](PORTFOLIO-QA.md)** for risk-score and internal-link checks, control-mapping corrections, and remaining verification limitations. These checks assess documentation consistency, not real-world control effectiveness.
+
 ## Frameworks and Practices
 
 - **NIST Cybersecurity Framework 2.0** — cybersecurity governance and risk management
