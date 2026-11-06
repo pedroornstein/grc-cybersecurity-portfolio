@@ -10,7 +10,7 @@ This assessment evaluates a fictional payment-processing vendor used by RouteShi
 - **Technical owner:** IT Manager
 - **Assessment type:** Initial vendor security review
 - **Vendor criticality:** High
-- **Assessment status:** Conditionally approved
+- **Assessment status:** Proposed conditional approval — simulated; no real decision or vendor assurance verified
 
 ## Vendor Relationship
 
@@ -36,24 +36,30 @@ The vendor:
 | Employee records | No | Not applicable |
 | RouteShield login credentials | No | Not applicable |
 
+## Evidence Basis and Rating Limitations
+
+**Critical interpretation:** All vendor answers and references to a supplied SOC 2 report, recovery tests, policies, contracts, encryption, and MFA are **invented scenario inputs**, not documents actually obtained or assessed. Ratings below describe how a hypothetical vendor response might be initially triaged; they **do not establish control design or operating effectiveness**. Any real reliance on a SOC 2 Type II report would require reviewing the period, opinion, scope, exceptions, relevant trust criteria, complementary user entity controls and subservice organizations.
+
 ## Security Assessment
 
 | ID | Security Domain | Assessment Question | Vendor Response / Evidence | Rating |
 |---|---|---|---|---|
-| VA-001 | Governance | Does the vendor maintain documented information-security policies? | Vendor reports annual policy review and executive approval. | Satisfactory |
-| VA-002 | Independent Assurance | Does the vendor maintain a current SOC 2 Type II report or equivalent assurance? | SOC 2 Type II report provided for review. | Satisfactory |
-| VA-003 | Access Control | Is multifactor authentication required for administrative and privileged access? | MFA is required for administrative accounts. | Satisfactory |
-| VA-004 | Encryption | Is sensitive information encrypted in transit and at rest? | TLS is used in transit, and stored sensitive data is encrypted. | Satisfactory |
-| VA-005 | Vulnerability Management | Are vulnerability scans and penetration tests performed regularly? | Quarterly scanning and annual penetration testing reported. | Satisfactory |
-| VA-006 | Incident Response | Does the vendor maintain and test an incident-response plan? | Documented plan exists, but evidence of the most recent exercise was not provided. | Needs Improvement |
-| VA-007 | Breach Notification | Is RouteShield notified promptly after a confirmed security incident? | Contract requires notification within 72 hours. | Satisfactory |
-| VA-008 | Business Continuity | Are continuity and disaster-recovery procedures documented and tested? | Procedures exist; summary results from the latest recovery test were provided. | Satisfactory |
-| VA-009 | Backup and Recovery | Are backups protected and restoration procedures tested? | Encrypted backups and annual restoration testing reported. | Satisfactory |
-| VA-010 | Subprocessors | Does the vendor identify and assess subcontractors that process RouteShield information? | Vendor maintains a subprocessor list, but advance change notification is limited. | Needs Improvement |
-| VA-011 | Data Retention | Are customer and transaction records deleted according to defined retention requirements? | Retention schedule exists, but deletion evidence was not provided. | Needs Improvement |
-| VA-012 | Termination | Can RouteShield data be returned or securely deleted when the contract ends? | Contract supports data return and deletion upon termination. | Satisfactory |
+| VA-001 | Governance | Does the vendor maintain documented information-security policies? | Vendor reports annual policy review and executive approval. | Reported satisfactory — unverified |
+| VA-002 | Independent Assurance | Does the vendor maintain a current SOC 2 Type II report or equivalent assurance? | SOC 2 Type II report provided for review. | Reported satisfactory — unverified |
+| VA-003 | Access Control | Is multifactor authentication required for administrative and privileged access? | MFA is required for administrative accounts. | Reported satisfactory — unverified |
+| VA-004 | Encryption | Is sensitive information encrypted in transit and at rest? | TLS is used in transit, and stored sensitive data is encrypted. | Reported satisfactory — unverified |
+| VA-005 | Vulnerability Management | Are vulnerability scans and penetration tests performed regularly? | Quarterly scanning and annual penetration testing reported. | Reported satisfactory — unverified |
+| VA-006 | Incident Response | Does the vendor maintain and test an incident-response plan? | Documented plan exists, but evidence of the most recent exercise was not provided. | Follow-up evidence needed |
+| VA-007 | Breach Notification | Is RouteShield notified promptly after a confirmed security incident? | Contract requires notification within 72 hours. | Reported satisfactory — unverified |
+| VA-008 | Business Continuity | Are continuity and disaster-recovery procedures documented and tested? | Procedures exist; summary results from the latest recovery test were provided. | Reported satisfactory — unverified |
+| VA-009 | Backup and Recovery | Are backups protected and restoration procedures tested? | Encrypted backups and annual restoration testing reported. | Reported satisfactory — unverified |
+| VA-010 | Subprocessors | Does the vendor identify and assess subcontractors that process RouteShield information? | Vendor maintains a subprocessor list, but advance change notification is limited. | Follow-up evidence needed |
+| VA-011 | Data Retention | Are customer and transaction records deleted according to defined retention requirements? | Retention schedule exists, but deletion evidence was not provided. | Follow-up evidence needed |
+| VA-012 | Termination | Can RouteShield data be returned or securely deleted when the contract ends? | Contract supports data return and deletion upon termination. | Reported satisfactory — unverified |
 
 ## Identified Findings
+
+These gaps are hypothetical evidence or contract exceptions. They are not findings arising from an independent inspection of actual BlueHarbor records.
 
 | Finding ID | Finding | Risk Level | Recommended Action | Owner | Target |
 |---|---|---|---|---|---|
@@ -64,14 +70,14 @@ The vendor:
 ## Overall Risk Evaluation
 
 - **Inherent vendor risk:** High
-- **Control effectiveness:** Generally effective
-- **Residual vendor risk:** Moderate
-- **Decision:** Conditionally approve
+- **Control effectiveness:** Not tested; hypothetical responses only
+- **Estimated residual vendor risk:** Moderate (scenario assumption, not verified)
+- **Decision:** Recommend conditional approval **for simulated management review**; no actual approval
 - **Review frequency:** Annually and after significant service or security changes
 
 ## Approval Conditions
 
-BlueHarbor Payment Services may remain approved provided that RouteShield:
+If this were a real vendor engagement, the business risk owner should consider approval only after evaluating the underlying assurance evidence, and then should:
 
 1. Tracks the three identified findings.
 2. Reviews the vendor’s SOC 2 report annually.
