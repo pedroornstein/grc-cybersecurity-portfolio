@@ -20,6 +20,9 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 | [04 · Security Control Mapping](04-control-mapping/control-mapping.md) | Connections between risks, NIST CSF 2.0 categories, ISO/IEC 27001:2022 Annex A controls, and example audit evidence |
 | [05 · Security Gap Analysis](05-security-gap-analysis/security-gap-analysis.md) | Seven control gaps, responsible owners, expected evidence, and a 30/60/90-day remediation roadmap |
 | [06 · Remediation Action Tracker](06-remediation-tracker/remediation-tracker.md) | Seven proposed actions linked to gaps and risk IDs, accountable owners, verification criteria, and exception handling |
+| [07 · Incident-Response Tabletop](07-incident-response-tabletop/tabletop-exercise.md) | Simulated ransomware incident, decision timeline, evaluation criteria, and hypothetical after-action findings |
+| [08 · Audit Evidence and Control Testing](08-audit-evidence/evidence-request-and-testing.md) | Prepared-by-client requests, control testing plans, sampling guidance, and working-paper template |
+| [09 · Risk-Treatment Decisions](09-risk-treatment-decisions/risk-treatment-memo.md) | Decision rationale, treatment sequencing, acceptance gates, and proposed management approvals |
 
 ## How the Artifacts Connect
 
@@ -29,6 +32,9 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 4. Link safeguards to recognized frameworks in the [control mapping](04-control-mapping/control-mapping.md).
 5. Prioritize identified deficiencies in the [security gap analysis](05-security-gap-analysis/security-gap-analysis.md).
 6. Track actions, evidence expectations, and exceptions with the [remediation action tracker](06-remediation-tracker/remediation-tracker.md).
+7. Walk through an incident decision process with the [simulated tabletop exercise](07-incident-response-tabletop/tabletop-exercise.md).
+8. Plan evidence collection and test procedures in the [audit-evidence workbook](08-audit-evidence/evidence-request-and-testing.md).
+9. Consider management tradeoffs with the [risk-treatment decision memo](09-risk-treatment-decisions/risk-treatment-memo.md).
 
 ## Frameworks and Practices
 
@@ -41,7 +47,7 @@ Control mappings are illustrative, not exhaustive. No actual SOC 2 report, ISO c
 
 ## Skills Demonstrated
 
-Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Remediation tracking · Documentation for audit readiness
+Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Remediation tracking · Incident-response tabletop design · Audit testing methodology · Risk-treatment recommendations · Documentation for audit readiness
 
 ## Author
 
