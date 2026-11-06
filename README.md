@@ -1,33 +1,49 @@
 # GRC Cybersecurity Portfolio
 
-A practical Governance, Risk, and Compliance portfolio demonstrating cybersecurity risk assessment, third-party risk management, and security-control mapping.
+A hands-on Governance, Risk, and Compliance (GRC) case study focused on cybersecurity risk assessment, third-party risk management, security control mapping, and remediation planning.
 
-## Portfolio Projects
+> **Simulation notice:** RouteShield Technologies, BlueHarbor Payment Services, all personnel, evidence, risks, and assessment conclusions in this repository are fictional. The artifacts are portfolio examples, not records from a real engagement, independent audit, or certification.
 
-1. [Company Scenario](01-company-scenario/company-profile.md)  
-   Fictional transportation SaaS organization used throughout the portfolio.
+## Case Study: RouteShield Technologies
 
-2. [Cybersecurity Risk Register](02-risk-register/risk-register.md)  
-   Ten cybersecurity and operational risks with likelihood, impact, treatments, ownership, residual risk, and framework references.
+RouteShield is a fictional 75-employee U.S. transportation SaaS company providing dispatch, scheduling, customer management, and payment integrations. Its sample technology environment includes AWS, Microsoft 365, employee endpoints, and external vendors.
 
-3. [Third-Party Vendor Security Assessment](03-vendor-assessment/vendor-assessment.md)  
-   Security assessment of a fictional payment-processing vendor, including data classification, findings, approval conditions, and residual risk.
+**Portfolio objective:** Show how a GRC analyst translates business context into documented risks, control recommendations, vendor assessments, and prioritized remediation actions.
 
-4. [NIST CSF and ISO 27001 Control Mapping](04-control-mapping/control-mapping.md)  
-   Mapping of major business risks and safeguards to NIST Cybersecurity Framework 2.0 and ISO/IEC 27001:2022 Annex A controls.
+## Explore the Projects
 
-## Frameworks Used
+| Artifact | What it demonstrates |
+| --- | --- |
+| [01 · Company Scenario](01-company-scenario/company-profile.md) | Business context, critical assets, data types, risk appetite, and compliance considerations |
+| [02 · Risk Register](02-risk-register/risk-register.md) | Ten risk scenarios, inherent and residual scores, risk ownership, and treatments |
+| [03 · Vendor Security Assessment](03-vendor-assessment/vendor-assessment.md) | Risk-based due diligence of fictional payment processor BlueHarbor, assessment findings, and conditional approval |
+| [04 · Security Control Mapping](04-control-mapping/control-mapping.md) | Connections between risks, NIST CSF 2.0 categories, ISO/IEC 27001:2022 Annex A controls, and example audit evidence |
+| [05 · Security Gap Analysis](05-security-gap-analysis/security-gap-analysis.md) | Seven control gaps, responsible owners, expected evidence, and a 30/60/90-day remediation roadmap |
 
-- NIST Cybersecurity Framework 2.0
-- ISO/IEC 27001:2022
-- SOC 2 security and availability principles
-- Third-party risk-management practices
+## How the Artifacts Connect
 
-## Case Study
+1. Start with the [company scenario](01-company-scenario/company-profile.md) to understand the business and assets.
+2. Evaluate the most relevant threats in the [risk register](02-risk-register/risk-register.md).
+3. Examine a critical service provider through the [vendor assessment](03-vendor-assessment/vendor-assessment.md).
+4. Link safeguards to recognized frameworks in the [control mapping](04-control-mapping/control-mapping.md).
+5. Prioritize identified deficiencies in the [security gap analysis](05-security-gap-analysis/security-gap-analysis.md).
 
-The portfolio follows RouteShield Technologies, a fictional U.S.-based transportation software company. All organizations, vendors, risks, findings, and business information are simulated for educational and professional portfolio purposes.
+## Frameworks and Practices
+
+- **NIST Cybersecurity Framework 2.0** — cybersecurity governance and risk management
+- **ISO/IEC 27001:2022 Annex A** — illustrative security-control alignment
+- **SOC 2** — illustrative assurance considerations for security and availability
+- **Third-party risk management** — vendor due diligence, evidence requests, and remediation tracking
+
+Control mappings are illustrative, not exhaustive. No actual SOC 2 report, ISO certification, or validated technical evidence is included.
+
+## Skills Demonstrated
+
+Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Documentation for audit readiness
 
 ## Author
 
-Pedro Ornstein  
-Cybersecurity and GRC Analyst
+**Pedro Ornstein**  
+Cybersecurity / Governance, Risk & Compliance portfolio
+
+*This repository is an educational demonstration of analytical work, not a claim of prior professional engagement with the fictional organizations.*
