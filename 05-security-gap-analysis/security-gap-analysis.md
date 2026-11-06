@@ -20,10 +20,14 @@ The review covers:
 
 ## Severity Ratings
 
-- **Critical:** Immediate action required
-- **High:** Remediate within 30 days
-- **Moderate:** Remediate within 31-90 days
-- **Low:** Address through ongoing improvement
+The severity label indicates the relative urgency and potential business impact of a gap. The **target** is a proposed remediation deadline reflecting dependencies and implementation effort, not a universal severity-based SLA.
+
+- **Critical:** Escalate immediately; define an urgent, approved remediation or containment timeline.
+- **High:** Prioritize promptly; target 30 days where feasible or document an approved, risk-based extension.
+- **Moderate:** Normally target remediation within 90 days, subject to risk acceptance and dependencies.
+- **Low:** Address through planned continuous improvement.
+
+High-severity gaps with 60-day proposed targets below require documented interim safeguards, explicit owner approval, and tracking of any residual exposure. The listed deadlines are scenario assumptions, not completed actions.
 
 ## Gap Summary
 
