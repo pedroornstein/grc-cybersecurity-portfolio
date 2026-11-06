@@ -24,6 +24,7 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 | [08 · Audit Evidence and Control Testing](08-audit-evidence/evidence-request-and-testing.md) | Prepared-by-client requests, control testing plans, sampling guidance, and working-paper template |
 | [09 · Risk-Treatment Decisions](09-risk-treatment-decisions/risk-treatment-memo.md) | Decision rationale, treatment sequencing, acceptance gates, and proposed management approvals |
 | [10 · Interview Walkthrough](10-interview-walkthrough/interview-guide.md) | Five-minute case-study walkthrough, defensible risk examples, and realistic interview questions |
+| [11 · Synthetic Offboarding Test](11-synthetic-offboarding-test/README.md) | Executable Python control-testing sample using fabricated access data, with two late cases and one evidence gap |
 
 ## How the Artifacts Connect
 
@@ -37,6 +38,11 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 8. Plan evidence collection and test procedures in the [audit-evidence workbook](08-audit-evidence/evidence-request-and-testing.md).
 9. Consider management tradeoffs with the [risk-treatment decision memo](09-risk-treatment-decisions/risk-treatment-memo.md).
 10. Practice presenting the work with the [interview walkthrough](10-interview-walkthrough/interview-guide.md).
+11. Reproduce a hypothetical access-control audit test with the [synthetic offboarding analysis](11-synthetic-offboarding-test/README.md).
+
+## Reproducible Checks
+
+Run `python scripts/validate_portfolio.py` locally using Python 3.10+, or review the [GitHub Actions quality workflow](.github/workflows/portfolio-quality.yml). Checks validate **portfolio consistency and synthetic computations only**; they do not establish live security, vendor assurance, ISO certification, or SOC 2 compliance.
 
 ## Quality Assurance and Limitations
 
@@ -53,7 +59,7 @@ Control mappings are illustrative, not exhaustive. NIST CSF 2.0 category IDs sho
 
 ## Skills Demonstrated
 
-Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Remediation tracking · Incident-response tabletop design · Audit testing methodology · Risk-treatment recommendations · Documentation for audit readiness
+Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Remediation tracking · Reproducible synthetic control testing · Incident-response tabletop design · Audit testing methodology · Risk-treatment recommendations · Documentation for audit readiness
 
 ## Author
 
