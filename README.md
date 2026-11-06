@@ -23,6 +23,7 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 | [07 · Incident-Response Tabletop](07-incident-response-tabletop/tabletop-exercise.md) | Simulated ransomware incident, decision timeline, evaluation criteria, and hypothetical after-action findings |
 | [08 · Audit Evidence and Control Testing](08-audit-evidence/evidence-request-and-testing.md) | Prepared-by-client requests, control testing plans, sampling guidance, and working-paper template |
 | [09 · Risk-Treatment Decisions](09-risk-treatment-decisions/risk-treatment-memo.md) | Decision rationale, treatment sequencing, acceptance gates, and proposed management approvals |
+| [10 · Interview Walkthrough](10-interview-walkthrough/interview-guide.md) | Five-minute case-study walkthrough, defensible risk examples, and realistic interview questions |
 
 ## How the Artifacts Connect
 
@@ -35,6 +36,7 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 7. Walk through an incident decision process with the [simulated tabletop exercise](07-incident-response-tabletop/tabletop-exercise.md).
 8. Plan evidence collection and test procedures in the [audit-evidence workbook](08-audit-evidence/evidence-request-and-testing.md).
 9. Consider management tradeoffs with the [risk-treatment decision memo](09-risk-treatment-decisions/risk-treatment-memo.md).
+10. Practice presenting the work with the [interview walkthrough](10-interview-walkthrough/interview-guide.md).
 
 ## Frameworks and Practices
 
@@ -43,7 +45,7 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 - **SOC 2** — illustrative assurance considerations for security and availability
 - **Third-party risk management** — vendor due diligence, evidence requests, and remediation tracking
 
-Control mappings are illustrative, not exhaustive. No actual SOC 2 report, ISO certification, or validated technical evidence is included.
+Control mappings are illustrative, not exhaustive. NIST CSF 2.0 category IDs should be checked against the [official NIST CSF 2.0 Core](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf); ISO/IEC 27001:2022 Annex A alignment is not independently certified. No actual SOC 2 report, ISO certification, or validated technical evidence is included.
 
 ## Skills Demonstrated
 
