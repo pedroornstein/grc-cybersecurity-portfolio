@@ -1,5 +1,9 @@
 # GRC Cybersecurity Portfolio
 
+[![Portfolio documentation QA](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml/badge.svg)](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml)
+
+*This status checks documentation consistency and a synthetic-data test—not actual organizational controls.*
+
 A hands-on Governance, Risk, and Compliance (GRC) case study focused on cybersecurity risk assessment, third-party risk management, security control mapping, and remediation planning.
 
 > **Simulation notice:** RouteShield Technologies, BlueHarbor Payment Services, all personnel, evidence, risks, and assessment conclusions in this repository are fictional. The artifacts are portfolio examples, not records from a real engagement, independent audit, or certification.
