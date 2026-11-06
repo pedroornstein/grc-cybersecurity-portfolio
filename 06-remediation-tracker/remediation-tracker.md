@@ -6,7 +6,7 @@
 
 Translate the [security gap analysis](../05-security-gap-analysis/security-gap-analysis.md) into assigned, trackable actions tied to the [risk register](../02-risk-register/risk-register.md). This demonstrates a typical GRC follow-up process: identify gaps, assign accountability, monitor milestones, validate evidence, and escalate exceptions.
 
-**Baseline:** Day 0 of the illustrative remediation program. Targets below are **relative**, not real-world due dates. All actions initially remain **Planned / Not verified**.
+**Baseline:** Day 0 of the illustrative remediation program. Vendor finding identifiers F-001 through F-003 are defined in the [fictional BlueHarbor assessment](../03-vendor-assessment/vendor-assessment.md). Targets below are **relative**, not real-world due dates. All actions initially remain **Planned / Not verified**.
 
 ## Action Tracker
 
@@ -17,10 +17,10 @@ Translate the [security gap analysis](../05-security-gap-analysis/security-gap-a
 | ACT-003 | GAP-003 Logging/monitoring | R-009 | High | IT Manager | Day 60* | Define critical log sources, centralize collection, enable alerts and test detections | Log source inventory; retention policy; alert test results | Planned — not verified |
 | ACT-004 | GAP-004 Backup restore tests | R-010, R-004 | High | IT Manager | Day 60* | Establish RTO/RPO and carry out documented restore test | Approved recovery objectives; restore-test log; results and corrective actions | Planned — not verified |
 | ACT-005 | GAP-005 Vulnerability SLAs | R-008 | High | Engineering Manager | Day 60* | Adopt severity-based remediation SLAs and exception workflow | Approved standard; sample vulnerability tickets; aging report | Planned — not verified |
-| ACT-006 | GAP-006 Vendor tracking | R-003, R-006 | Moderate | Vendor Risk Owner | Day 90 | Centralize critical vendor inventory, findings, evidence requests, and review dates | Vendor register; evidence request log; follow-up approvals | Planned — not verified |
+| ACT-006 | GAP-006 Vendor tracking | R-003, R-006 | Moderate | Vendor Risk Owner | Day 90 | Centralize critical vendor inventory, track BlueHarbor example findings F-001 to F-003 and other vendor evidence requests, and define reassessment dates | Vendor register; evidence request log; follow-up approvals | Planned — not verified |
 | ACT-007 | GAP-007 Incident exercises | R-004 | Moderate | IT Manager | Day 90 | Approve incident response plan, perform tabletop, document lessons learned | Approved IR plan; exercise agenda; after-action report; action register | Planned — not verified |
 
-*** Exception required:** High-priority actions ACT-003, ACT-004 and ACT-005 have proposed Day 60 targets rather than the preferred Day 30 target. This is a *proposed, unapproved* schedule extension. The accountable owner must record rationale, interim compensating safeguards, residual risk, a decision-maker, and approval before accepting these deadlines. Until then, the extensions are **pending**, not accepted.
+**\* Exception required:** High-priority actions ACT-003, ACT-004 and ACT-005 have proposed Day 60 targets rather than the preferred Day 30 target. This is a *proposed, unapproved* schedule extension. The accountable owner must record rationale, interim compensating safeguards, residual risk, a decision-maker, and approval before accepting these deadlines. Until then, the extensions are **pending**, not accepted.
 
 ## Milestones and Validation
 
