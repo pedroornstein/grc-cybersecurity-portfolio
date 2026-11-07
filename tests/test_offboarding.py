@@ -64,6 +64,22 @@ class OffboardingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "positive"):
             self.evaluate([BASE], 0)
 
+
+    def test_subsecond_over_boundary_is_late(self):
+        row = {**BASE, "identity_disabled_utc": "2026-09-01T16:00:00.000001Z"}
+        self.assertEqual(self.evaluate([row])["rows"][0]["status"], "LATE")
+
+    def test_subsecond_before_termination_rejected(self):
+        row = {**BASE, "identity_disabled_utc": "2026-09-01T11:59:59.999999Z"}
+        with self.assertRaisesRegex(ValueError, "predates termination"):
+            self.evaluate([row])
+
+    def test_nonfinite_sla_rejected(self):
+        for sla in (float("nan"), float("inf"), float("-inf")):
+            with self.subTest(sla=sla):
+                with self.assertRaisesRegex(ValueError, "finite positive"):
+                    self.evaluate([BASE], sla)
+
     def test_naive_timestamp_rejected(self):
         with self.assertRaisesRegex(ValueError, "UTC"):
             utc_datetime("2026-09-01T12:00:00")
