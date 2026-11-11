@@ -37,9 +37,9 @@ class OffboardingTests(unittest.TestCase):
             self.evaluate_csv_text(csv_text)
 
     def test_missing_value_for_extra_named_column_rejected(self):
-        csv_text = (",".join(FIELDS) + ",notes\\n"
+        csv_text = (",".join(FIELDS) + ",notes\n"
                     + "SYN-T01,Microsoft 365,2026-09-01T12:00:00Z,"
-                    + "2026-09-01T16:00:00Z\\n")
+                    + "2026-09-01T16:00:00Z\n")
         with self.assertRaisesRegex(ValueError, "Malformed CSV row 2"):
             self.evaluate_csv_text(csv_text)
 
