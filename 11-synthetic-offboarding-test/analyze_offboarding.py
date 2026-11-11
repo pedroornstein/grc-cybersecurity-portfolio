@@ -3,6 +3,7 @@
 import argparse
 import csv
 import json
+import math
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -18,8 +19,8 @@ def utc_datetime(value):
 
 
 def analyze(csv_path, sla_hours=4):
-    if sla_hours <= 0:
-        raise ValueError("SLA must be a positive number of hours")
+    if not isinstance(sla_hours, (int, float)) or not math.isfinite(sla_hours) or sla_hours <= 0:
+        raise ValueError("SLA must be a finite positive number of hours")
     with open(csv_path, newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
         if not reader.fieldnames or not COLUMNS.issubset(reader.fieldnames):
@@ -38,10 +39,12 @@ def analyze(csv_path, sla_hours=4):
                 status, hours = "MISSING_EVIDENCE", None
             else:
                 disabled = utc_datetime(disabled_text)
-                hours = round((disabled - terminated).total_seconds() / 3600, 4)
-                if hours < 0:
+                elapsed = disabled - terminated
+                if elapsed.total_seconds() < 0:
                     raise ValueError(f"{case_id}: disablement predates termination")
-                status = "PASS" if hours <= sla_hours else "LATE"
+                # Compare unrounded duration so records just past the SLA do not pass.
+                status = "PASS" if elapsed.total_seconds() <= sla_hours * 3600 else "LATE"
+                hours = round(elapsed.total_seconds() / 3600, 4)
             results.append({
                 "case_id": case_id,
                 "system": row["system"].strip(),
