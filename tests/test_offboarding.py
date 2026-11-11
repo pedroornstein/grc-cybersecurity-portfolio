@@ -24,6 +24,44 @@ class OffboardingTests(unittest.TestCase):
                 writer.writerows(rows)
             return analyze(path, sla_hours)
 
+    def evaluate_csv_text(self, text):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "data.csv"
+            path.write_text(text, encoding="utf-8")
+            return analyze(path)
+
+    def test_truncated_row_rejected_not_misclassified_as_missing_evidence(self):
+        csv_text = (",".join(FIELDS) + "\n"
+                    + "SYN-T01,Microsoft 365,2026-09-01T12:00:00Z\n")
+        with self.assertRaisesRegex(ValueError, "Malformed CSV row 2"):
+            self.evaluate_csv_text(csv_text)
+
+    def test_surplus_unnamed_csv_field_rejected(self):
+        csv_text = (",".join(FIELDS) + "\n"
+                    + "SYN-T01,Microsoft 365,2026-09-01T12:00:00Z,"
+                    + "2026-09-01T16:00:00Z,EXTRA\n")
+        with self.assertRaisesRegex(ValueError, "Malformed CSV row 2"):
+            self.evaluate_csv_text(csv_text)
+
+    def test_duplicate_header_rejected(self):
+        csv_text = ("case_id,system,system,termination_utc,identity_disabled_utc\n"
+                    "SYN-T01,Microsoft 365,Microsoft 365,"
+                    "2026-09-01T12:00:00Z,2026-09-01T16:00:00Z\n")
+        with self.assertRaisesRegex(ValueError, "Duplicate or blank CSV header"):
+            self.evaluate_csv_text(csv_text)
+
+    def test_blank_header_rejected(self):
+        csv_text = ("case_id,system,termination_utc,identity_disabled_utc,\n"
+                    "SYN-T01,Microsoft 365,2026-09-01T12:00:00Z,"
+                    "2026-09-01T16:00:00Z,\n")
+        with self.assertRaisesRegex(ValueError, "Duplicate or blank CSV header"):
+            self.evaluate_csv_text(csv_text)
+
+    def test_explicitly_blank_evidence_stays_inconclusive(self):
+        csv_text = (",".join(FIELDS) + "\n"
+                    + "SYN-T01,Microsoft 365,2026-09-01T12:00:00Z,\n")
+        self.assertEqual(self.evaluate_csv_text(csv_text)["missing_evidence"], 1)
+
     def test_sample_dataset_expected_totals(self):
         path = Path(__file__).resolve().parents[1] / "11-synthetic-offboarding-test" / "synthetic-offboarding.csv"
         result = analyze(path)
