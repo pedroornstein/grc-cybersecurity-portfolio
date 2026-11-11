@@ -33,7 +33,7 @@ def analyze(csv_path, sla_hours=4):
         for row_number, row in enumerate(reader, start=2):
             # DictReader otherwise silently stores surplus fields under None
             # and fills absent columns with None, compromising audit integrity.
-            if None in row or any(row.get(column) is None for column in COLUMNS):
+            if None in row or any(value is None for value in row.values()):
                 raise ValueError(f"Malformed CSV row {row_number}: missing or extra fields")
             case_id = (row.get("case_id") or "").strip()
             if not case_id or case_id in seen:
