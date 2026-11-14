@@ -1,20 +1,24 @@
-# GRC Cybersecurity Portfolio
+# GRC and Cybersecurity Portfolio
 
-[![Portfolio documentation QA](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml/badge.svg)](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml)
+**Pedro Ornstein** · Governance, risk and compliance · IT audit · Cybersecurity
 
-*This status checks documentation consistency and a synthetic-data test—not actual organizational controls.*
+RouteShield Technologies is a fictional 75-person transportation SaaS company. I built this case study to show how I assess cybersecurity risk, evaluate a third party, prioritize remediation, and design a repeatable control test.
 
-A hands-on Governance, Risk, and Compliance (GRC) case study focused on cybersecurity risk assessment, third-party risk management, security control mapping, and remediation planning.
+> RouteShield, its vendors and its records are fictional. The framework mappings are illustrative, and the synthetic test provides no assurance about production controls.
 
-> **Simulation notice:** RouteShield Technologies, BlueHarbor Payment Services, all personnel, evidence, risks, and assessment conclusions in this repository are fictional. The artifacts are portfolio examples, not records from a real engagement, independent audit, or certification.
+## Start here
 
-## Case Study: RouteShield Technologies
+| Work sample | What to look for |
+| --- | --- |
+| [Risk register](02-risk-register/risk-register.md) and [decision memo](09-risk-treatment-decisions/risk-treatment-memo.md) | How ten risks are scored, why vulnerability remediation and account compromise lead the proposed priorities, and what evidence management would need before rescoring. |
+| [Payment processor assessment](03-vendor-assessment/vendor-assessment.md) | How due diligence findings inform a proposed conditional approval, with evidence and follow-up requirements. |
+| [Reproducible offboarding test](11-synthetic-offboarding-test/README.md) | A Python test of 12 fabricated Microsoft 365 records against an illustrative four-hour threshold. Nine meet the threshold, two are late, and one lacks a disablement timestamp. |
 
-RouteShield is a fictional 75-employee U.S. transportation SaaS company providing dispatch, scheduling, customer management, and payment integrations. Its sample technology environment includes AWS, Microsoft 365, employee endpoints, and external vendors.
+## Follow one risk through the case study
 
-**Portfolio objective:** Show how a GRC analyst translates business context into documented risks, control recommendations, vendor assessments, and prioritized remediation actions.
+[R-005 in the risk register](02-risk-register/risk-register.md) describes the risk of a former employee retaining access. [GAP-002](05-security-gap-analysis/security-gap-analysis.md#gap-002-access-reviews-and-offboarding) documents the lifecycle gap, and [ACT-002](06-remediation-tracker/remediation-tracker.md) assigns a proposed response to HR and IT. The [evidence workbook](08-audit-evidence/evidence-request-and-testing.md) defines PBC-002 and TC-002 for collecting and testing offboarding records. The [Python example](11-synthetic-offboarding-test/README.md) demonstrates the timestamp comparison for one system and identifies records that warrant follow-up.
 
-## Explore the Projects
+## Artifact index
 
 | Artifact | What it demonstrates |
 | --- | --- |
@@ -30,44 +34,12 @@ RouteShield is a fictional 75-employee U.S. transportation SaaS company providin
 | [10 · Interview Walkthrough](10-interview-walkthrough/interview-guide.md) | Five-minute case-study walkthrough, defensible risk examples, and realistic interview questions |
 | [11 · Synthetic Offboarding Test](11-synthetic-offboarding-test/README.md) | Executable Python control-testing sample using fabricated access data, with two late cases and one evidence gap |
 
-## How the Artifacts Connect
+## Reproduce the checks
 
-1. Start with the [company scenario](01-company-scenario/company-profile.md) to understand the business and assets.
-2. Evaluate the most relevant threats in the [risk register](02-risk-register/risk-register.md).
-3. Examine a critical service provider through the [vendor assessment](03-vendor-assessment/vendor-assessment.md).
-4. Link safeguards to recognized frameworks in the [control mapping](04-control-mapping/control-mapping.md).
-5. Prioritize identified deficiencies in the [security gap analysis](05-security-gap-analysis/security-gap-analysis.md).
-6. Track actions, evidence expectations, and exceptions with the [remediation action tracker](06-remediation-tracker/remediation-tracker.md).
-7. Walk through an incident decision process with the [simulated tabletop exercise](07-incident-response-tabletop/tabletop-exercise.md).
-8. Plan evidence collection and test procedures in the [audit-evidence workbook](08-audit-evidence/evidence-request-and-testing.md).
-9. Consider management tradeoffs with the [risk-treatment decision memo](09-risk-treatment-decisions/risk-treatment-memo.md).
-10. Practice presenting the work with the [interview walkthrough](10-interview-walkthrough/interview-guide.md).
-11. Reproduce a hypothetical access-control audit test with the [synthetic offboarding analysis](11-synthetic-offboarding-test/README.md).
+From the repository root, run `python scripts/validate_portfolio.py` with Python 3.10+. See the [QA notes](PORTFOLIO-QA.md) and [GitHub Actions workflow](.github/workflows/portfolio-quality.yml) for coverage and limitations.
 
-## Reproducible Checks
+[![Portfolio documentation and synthetic test checks](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml/badge.svg)](https://github.com/pedroornstein/grc-cybersecurity-portfolio/actions/workflows/portfolio-quality.yml)
 
-Run `python scripts/validate_portfolio.py` locally using Python 3.10+, or review the [GitHub Actions quality workflow](.github/workflows/portfolio-quality.yml). Checks validate **portfolio consistency and synthetic computations only**; they do not establish live security, vendor assurance, ISO certification, or SOC 2 compliance.
+## Related work
 
-## Quality Assurance and Limitations
-
-See the **[portfolio quality-assurance review](PORTFOLIO-QA.md)** for risk-score and internal-link checks, control-mapping corrections, and remaining verification limitations. These checks assess documentation consistency, not real-world control effectiveness.
-
-## Frameworks and Practices
-
-- **NIST Cybersecurity Framework 2.0** — cybersecurity governance and risk management
-- **ISO/IEC 27001:2022 Annex A** — illustrative security-control alignment
-- **SOC 2** — illustrative assurance considerations for security and availability
-- **Third-party risk management** — vendor due diligence, evidence requests, and remediation tracking
-
-Control mappings are illustrative, not exhaustive. NIST CSF 2.0 category IDs should be checked against the [official NIST CSF 2.0 Core](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf); ISO/IEC 27001:2022 Annex A alignment is not independently certified. No actual SOC 2 report, ISO certification, or validated technical evidence is included.
-
-## Skills Demonstrated
-
-Cybersecurity risk identification and scoring · Risk treatment planning · Third-party security assessment · Control mapping · Gap analysis · Remediation prioritization · Remediation tracking · Reproducible synthetic control testing · Incident-response tabletop design · Audit testing methodology · Risk-treatment recommendations · Documentation for audit readiness
-
-## Author
-
-**Pedro Ornstein**  
-Cybersecurity / Governance, Risk & Compliance portfolio
-
-*This repository is an educational demonstration of analytical work, not a claim of prior professional engagement with the fictional organizations.*
+[WordPress security review](https://github.com/pedroornstein/wordpress-site-security-audit) · A retrospective report with a documented review of the evidence needed to verify its claims.

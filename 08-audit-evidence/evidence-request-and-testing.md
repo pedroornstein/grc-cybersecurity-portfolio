@@ -38,6 +38,10 @@
 | TC-007 | Vendor assurance | Trace critical vendor classification to due diligence, findings, approvals and reassessment date | Review is documented and approvals/conditions traceable | Critical vendor approved with unresolved unaccepted risk |
 | TC-008 | Incident-response readiness | Inspect current plan, exercise attendance, scenarios, after-action review and corrective tracking | Approved plan; evidence of exercise and closed/owned findings | Exercise claimed without supporting documentation |
 
+### Worked example for TC-002
+
+The [synthetic offboarding test](../11-synthetic-offboarding-test/README.md) applies the timestamp comparison to 12 fabricated records in one system. Two records exceed the illustrative threshold and one lacks a disablement timestamp. In a live review, reconcile the HR population to the in-scope systems, confirm the approved threshold, and obtain source evidence for the missing timestamp before drawing conclusions.
+
 ## Sampling Guidance
 
 Sampling is risk-based and **not a fixed assurance formula**. For a real engagement:
