@@ -25,8 +25,16 @@ def analyze(csv_path, sla_hours=4):
         reader = csv.DictReader(handle)
         if not reader.fieldnames or not COLUMNS.issubset(reader.fieldnames):
             raise ValueError(f"Required CSV columns: {sorted(COLUMNS)}")
+        if len(reader.fieldnames) != len(set(reader.fieldnames)) or any(
+            not name.strip() for name in reader.fieldnames
+        ):
+            raise ValueError("Duplicate or blank CSV header")
         results, seen = [], set()
-        for row in reader:
+        for row_number, row in enumerate(reader, start=2):
+            # DictReader otherwise silently stores surplus fields under None
+            # and fills absent columns with None, compromising audit integrity.
+            if None in row or any(value is None for value in row.values()):
+                raise ValueError(f"Malformed CSV row {row_number}: missing or extra fields")
             case_id = (row.get("case_id") or "").strip()
             if not case_id or case_id in seen:
                 raise ValueError(f"Blank or duplicate case ID: {case_id!r}")
